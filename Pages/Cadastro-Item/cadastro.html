@@ -3,10 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./cadastro-style.css" />
     <link rel="stylesheet" href="../Header.css" />
     <title>Cadastro</title>
   </head>
   <body>
     <script src="../LoadLoggedHeader.js"></script>
+
+    <main>
+      <div id="title">
+        <h1>Cadastro de Produto</h1>
+      </div>
+      <div id="registerWindow">
+        <input type="text" id="product-name" placeholder="Nome" required />
+
+        <textarea
+          id="product-description"
+          placeholder="Descrição"
+          cols="20"
+          rows="15"
+          required
+        ></textarea>
+
+        <input
+          type="text"
+          id="product-name"
+          placeholder="Un./Kg"
+          required
+          style="width: 60%"
+        />
+      </div>
+      <div id="buttonArea">
+        <button id="quit" onclick="location.href = '../Landing/landing.html'">
+          Cancelar
+        </button>
+        <button id="end">Finalizar</button>
+      </div>
+    </main>
   </body>
 </html>

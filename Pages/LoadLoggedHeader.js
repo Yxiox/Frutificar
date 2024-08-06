@@ -8,7 +8,7 @@ document.write(`
           gap: 15px;
         "
       >
-        <a href="../Index/landing.html"><img src="../../Images/Icon.png" height="70px" /></a>
+        <a href="../Landing/landing.html"><img src="../../Images/Icon.png" height="70px" /></a>
         <h2>Frutificar</h2>
       </div>
       <div
@@ -32,9 +32,9 @@ document.write(`
           <a href="../Historico/historico.html"><button id="recentesSection">Recentes</button></a>
         </div>
 
-        <button id="logoff" style="height: 60px; width: 60px">
+        <button id="logoff" style="height: 60px; width: 60px" onclick="location.href='../Login/login.html'">
           <img
-            src="https://cdn3.iconfinder.com/data/icons/glyph/227/Power-512.png"
+            src="../../Images/Logoff.webp"
             height="40px"
           />
         </button>
