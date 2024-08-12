@@ -1,3 +1,10 @@
+var loginMaster=[{
+  user:"admin",
+  pass:"admin"
+}];
+
+localStorage.setItem("logins", JSON.stringify(loginMaster));
+
 document.write(`
     <header>
       <div
