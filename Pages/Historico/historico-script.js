@@ -7,3 +7,12 @@ const items = [{
     name:'teste',
     price:'R$800,00'
 }];
+
+function saveItems(toSave){
+    localStorage.setItem("items", toSave);
+}
+
+function getItems(){
+    items = localStorage.getItem("items");
+}
+
