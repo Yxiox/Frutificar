@@ -11,6 +11,7 @@ function validateLogin(usuario, senha){
     let local = getLogins();
 
     if(contains(local, login={user:usuario, pass:senha}) === true){
+        localStorage.setItem("logged", JSON.stringify("true"));
         location.href = "../Landing/landing.html";
         return true;
     }

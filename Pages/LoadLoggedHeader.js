@@ -32,7 +32,7 @@ document.write(`
           <a href="../Historico/historico.html"><button id="recentesSection">Recentes</button></a>
         </div>
 
-        <button id="logoff" style="height: 60px; width: 60px" onclick="location.href='../Login/login.html'">
+        <button id="logoff" style="height: 60px; width: 60px" onclick="location.href='../Login/login.html'; ">
           <img
             src="../../Images/Logoff.webp"
             height="40px"
@@ -41,3 +41,7 @@ document.write(`
       </div>
     </header>
 `);
+
+if(JSON.parse(localStorage.getItem("logged")) === "false"){
+  location.href = "../Login/login.html";
+}

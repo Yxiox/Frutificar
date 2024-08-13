@@ -52,6 +52,7 @@ input {
   }
 
   #cadastrar{
+    cursor: pointer;
     background-color: #92d04f;
   }
 
