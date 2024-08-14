@@ -10,7 +10,7 @@ document.write(`
           gap: 15px;
         "
       >
-        <img src="../../Images/Icon.png" height="70px" />
+        <a href="../Login/login.html"><img src="../../Images/Icon.png" height="70px" /></a>
         <h2>Frutificar</h2>
       </div>
       <div

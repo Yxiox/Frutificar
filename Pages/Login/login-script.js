@@ -16,6 +16,7 @@ function validateLogin(usuario, senha){
         return true;
     }
     else{
+        alert("Login ou senha incorretos/inexistentes.");
         return false
     }
 }
