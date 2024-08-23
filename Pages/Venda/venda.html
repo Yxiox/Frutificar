@@ -9,6 +9,7 @@
   </head>
   <body>
     <script src="../LoadLoggedHeader.js"></script>
+    <script src="./venda-script.js"></script>
 
     <main>
       <div id="items-frame">
@@ -16,11 +17,7 @@
           <li id="Item" style="display: flex">
             <div class="container">
               <input list="frutas" id="produto" />
-              <datalist id="frutas">
-                <option value="Pera"></option>
-                <option value="Uva"></option>
-                <option value="Maçã"></option>
-              </datalist>
+              <datalist id="frutas"> </datalist>
 
               <h1>R$0,00</h1>
               <div style="display: flex; align-items: center; gap: 5px">
@@ -28,7 +25,7 @@
                 <input type="number" style="width: 50px" id="qtd" />
               </div>
             </div>
-            <button id="adicionar">+</button>
+            <button id="adicionar" onclick="adicionarLista()">+</button>
           </li>
         </ul>
       </div>
@@ -41,6 +38,5 @@
         <button id="cancelar">Cancelar</button>
       </div>
     </main>
-    <script src="./venda-script.js"></script>
   </body>
 </html>
