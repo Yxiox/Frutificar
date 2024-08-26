@@ -9,7 +9,7 @@ const produtoInputId = "produto";
 const qtdInputId = "qtd";
 const produtoInput = getElementById(produtoInputId);
 const quantidadeInput = getElementById(qtdInputId);
-const form = document.getElementById("produt");
+const form = document.getElementById("produto");
 const listaDisplay = document.getElementById("ulista");
 const precoDisplay = document.getElementById("preco");
 
