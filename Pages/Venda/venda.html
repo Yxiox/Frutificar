@@ -13,7 +13,7 @@
 
     <main>
       <div id="items-frame">
-        <ul style="list-style: none; width: 100%">
+        <ul style="list-style: none; width: 100%" id="ulista">
           <li id="Item" style="display: flex">
             <div class="container">
               <input list="frutas" id="produto" />
@@ -22,17 +22,28 @@
               <h1>R$0,00</h1>
               <div style="display: flex; align-items: center; gap: 5px">
                 <h3>UN.</h3>
-                <input type="number" style="width: 50px" id="qtd" />
+                <input
+                  type="number"
+                  style="width: 50px"
+                  id="qtd"
+                  min="0"
+                  placeholder="0"
+                />
               </div>
             </div>
-            <button id="adicionar" onclick="adicionarLista()">+</button>
+            <button
+              id="adicionar"
+              onclick="adicionarLista(); calcularPreco(); window.location.reload();"
+            >
+              +
+            </button>
           </li>
         </ul>
       </div>
       <div id="actions-frame">
         <div id="pricing">
           <h1>Total</h1>
-          <h1 id="preco">{{precoFinal}}</h1>
+          <h1 id="preco"></h1>
         </div>
         <button id="finalizar">Finalizar</button>
         <button id="cancelar">Cancelar</button>
