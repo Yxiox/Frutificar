@@ -85,7 +85,11 @@ function loadOptions() {
   setOptions();
   for (let i = 0; i < storeState.listaNomes.length; i++) {
     form.innerHTML +=
-      "<option value=" + storeState.listaNomes[i] + "></option>";
+      "<option value=" +
+      storeState.listaNomes[i] +
+      ">" +
+      storeState.listaNomes[i] +
+      "</option>";
   }
 }
 
