@@ -12,6 +12,7 @@ const quantidadeInput = getElementById(qtdInputId);
 const form = document.getElementById("produto");
 const listaDisplay = document.getElementById("ulista");
 const precoDisplay = document.getElementById("preco");
+const finalizarButton = document.getElementById("finalizar");
 
 function getElementById(id) {
   return document.getElementById(id);
@@ -135,4 +136,31 @@ function calcularPreco() {
     }
   }
   localStorage.setItem("sessionPrice", JSON.stringify(storeState.preco));
+}
+
+function getVendas() {
+  let vendas = JSON.parse(localStorage.getItem("vendas"));
+  return vendas === null ? [] : vendas;
+}
+
+function finalizar() {
+  if (getVendas()) {
+    let vendas = getVendas();
+    let itensQtd = 0;
+
+    for (let i = 0; i < storeState.lista.length; i++) {
+      itensQtd += parseInt(storeState.lista[i].quantidade);
+    }
+
+    vendas.push({
+      numero: vendas.length + 1,
+      itens: itensQtd,
+      valor: getSessionPrice(),
+    });
+
+    localStorage.setItem("vendas", JSON.stringify(vendas));
+    window.location.href = "../Landing/landing.html";
+  } else {
+    alert("Algo deu errado");
+  }
 }
