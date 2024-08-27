@@ -4,9 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../Header.css" />
+    <link rel="stylesheet" href="./venda-style.css" />
     <title>Venda</title>
   </head>
   <body>
     <script src="../LoadLoggedHeader.js"></script>
+    <main>
+      <div id="items-frame">
+        <ul style="list-style: none; width: 100%" id="ulista">
+          <li id="Item" style="display: flex">
+            <div class="container">
+              <select list="frutas" id="produto"></select>
+
+              <div style="display: flex; align-items: center; gap: 5px">
+                <h3>UN.</h3>
+                <input
+                  type="number"
+                  style="width: 50px"
+                  id="qtd"
+                  min="0"
+                  placeholder="0"
+                />
+              </div>
+            </div>
+            <button
+              id="adicionar"
+              onclick="adicionarLista(); calcularPreco(); window.location.reload();"
+            >
+              +
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div id="actions-frame">
+        <div id="pricing">
+          <h1>Total</h1>
+          <h1 id="preco"></h1>
+        </div>
+        <button id="finalizar" onclick="finalizar();">Finalizar</button>
+        <button
+          id="cancelar"
+          onclick='window.location.href = "../Landing/landing.html";'
+        >
+          Cancelar
+        </button>
+      </div>
+    </main>
+    <script src="./venda-script.js"></script>
   </body>
 </html>
