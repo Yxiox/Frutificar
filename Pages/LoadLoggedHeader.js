@@ -19,7 +19,8 @@ document.write(`
           gap: 15px;
         "
       >
-        <a href="../Cadastro-Item/cadastro.html"><button id="cadastroSection">Cadastro de Produto</button></a>
+      <a href="../Cadastro-Item/cadastro.html"><button id="cadastroSection">Cadastro de Produto</button></a>
+      <a href="../Lista/lista.html"><button id="listaSection">Lista de Produtos</button></a>
         <div
           style="
             display: flex;
@@ -30,11 +31,12 @@ document.write(`
         >
           <a href="../Venda/venda.html"><button id="venderSection">Vender</button></a>
           <a href="../Historico/historico.html"><button id="recentesSection">Recentes</button></a>
-        </div>
-
-        <button id="logoff" style="height: 60px; width: 60px" onclick="location.href='../Login/login.html'; ">
+          
+          </div>
+          
+          <button id="logoff" style="height: 60px; width: 60px" onclick="location.href='../Login/login.html'; ">
           <img
-            src="../../Images/Logoff.webp"
+          src="../../Images/Logoff.webp"
             height="40px"
           />
         </button>
@@ -42,6 +44,6 @@ document.write(`
     </header>
 `);
 
-if(JSON.parse(localStorage.getItem("logged")) === "false"){
+if (JSON.parse(localStorage.getItem("logged")) === "false") {
   location.href = "../Login/login.html";
 }

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produtos</title>
+    <link rel="stylesheet" href="../Header.css" />
+    <link rel="stylesheet" href="./lista-style.css" />
+  </head>
+  <body>
+    <script src="../LoadLoggedHeader.js"></script>
+
+    <main>
+      <div id="container"></div>
+    </main>
+
+    <div id="telaEdicao">
+      <input type="text" id="novoNome" placeholder="Novo Nome" />
+      <input type="text" id="novaDescricao" placeholder="Nova Descrição" />
+      <input type="number" id="novoPreco" placeholder="Novo Preço" />
+      <div id="buttonArea">
+        <button id="quit" onclick="fecharEdicao()">Cancelar</button>
+        <button id="end" onclick="efetivar()">Finalizar</button>
+      </div>
+    </div>
+    <script src="./lista-script.js"></script>
+  </body>
+</html>
