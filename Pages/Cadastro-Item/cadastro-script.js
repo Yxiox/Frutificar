@@ -13,14 +13,16 @@ function addContent() {
   let precoInput = document.getElementById("product-price");
 
   if (nomeInput.value != null) {
-    if (precoInput != null && parseFloat(precoInput) > 0) {
+    if (precoInput != null) {
       if (descricaoInput.value != null) {
         if (listaProdutos != null) {
+          if(precoInput > 0){
           listaProdutos.push({
             nome: nomeInput.value,
             preco: parseFloat(precoInput.value),
             descricao: descricaoInput.value,
-          });
+          });}else{
+            alert("Preço não permitido!")}
         } else {
           listaProdutos = [
             {
