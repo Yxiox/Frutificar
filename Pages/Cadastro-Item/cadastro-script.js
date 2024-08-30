@@ -13,7 +13,7 @@ function addContent() {
   let precoInput = document.getElementById("product-price");
 
   if (nomeInput.value != null) {
-    if (precoInput != null) {
+    if (precoInput != null && precoInput > 0) {
       if (descricaoInput.value != null) {
         if (listaProdutos != null) {
           listaProdutos.push({
@@ -53,6 +53,8 @@ function addContent() {
         alert("Cadastrado com sucesso!");
         window.location.reload();
       }
+    } else {
+      alert("Preço não permitido!");
     }
   }
 }

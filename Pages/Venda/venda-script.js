@@ -119,11 +119,15 @@ function adicionarLista() {
   let produtoPnputVale = getInputValueById(produtoInputId);
   let qtdInputValue = getInputValueById(qtdInputId);
 
-  storeState.lista.push({
-    nome: produtoPnputVale,
-    quantidade: qtdInputValue,
-  });
-  localStorage.setItem("sessionList", JSON.stringify(storeState.lista));
+  if (qtdInputValue > 0) {
+    storeState.lista.push({
+      nome: produtoPnputVale,
+      quantidade: qtdInputValue,
+    });
+    localStorage.setItem("sessionList", JSON.stringify(storeState.lista));
+  } else {
+    alert("Quantidade não permitida!");
+  }
 }
 
 //Calcula o preço e atualiza o página com base nos itens da lista
