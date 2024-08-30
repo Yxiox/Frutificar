@@ -1,7 +1,9 @@
+localStorage.removeItem("sessionList");
+localStorage.removeItem("sessionPrice");
+
 const sumHtml = document.getElementById("sum");
 
 const vendas = JSON.parse(localStorage.getItem("vendas"));
-
 let totalArrecadado = 0;
 let totalItens = 0;
 let totalVendas = 0;

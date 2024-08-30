@@ -1,3 +1,6 @@
+localStorage.removeItem("sessionList");
+localStorage.removeItem("sessionPrice");
+
 const produtos = getProdutos();
 const telaEdicao = document.getElementById("telaEdicao");
 let listagem;

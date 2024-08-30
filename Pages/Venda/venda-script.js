@@ -163,6 +163,9 @@ function finalizar() {
     });
 
     localStorage.setItem("vendas", JSON.stringify(vendas));
+
+    alert("Venda finalizada com sucesso!");
+
     window.location.href = "../Landing/landing.html";
   } else {
     alert("Algo deu errado");
