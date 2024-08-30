@@ -55,8 +55,6 @@ function addContent() {
         alert("Cadastrado com sucesso!");
         window.location.reload();
       }
-    } else {
-      alert("Preço não permitido!");
-    }
+    } 
   }
 }
