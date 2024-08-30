@@ -13,7 +13,7 @@ function addContent() {
   let precoInput = document.getElementById("product-price");
 
   if (nomeInput.value != null) {
-    if (precoInput != null && parseFloat(precoInput > 0)) {
+    if (precoInput != null && parseFloat(precoInput) > 0) {
       if (descricaoInput.value != null) {
         if (listaProdutos != null) {
           listaProdutos.push({
