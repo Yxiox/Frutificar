@@ -16,45 +16,35 @@ function addContent() {
     if (precoInput != null) {
       if (descricaoInput.value != null) {
         if (listaProdutos != null) {
-          if(precoInput > 0){
-          listaProdutos.push({
-            nome: nomeInput.value,
-            preco: parseFloat(precoInput.value),
-            descricao: descricaoInput.value,
-          });}else{
-            alert("Preço não permitido!")}
-        } else {
-          listaProdutos = [
-            {
+          if (precoInput.value > 0) {
+            listaProdutos.push({
               nome: nomeInput.value,
               preco: parseFloat(precoInput.value),
               descricao: descricaoInput.value,
-            },
-          ];
-        }
-        localStorage.setItem("produtos", JSON.stringify(listaProdutos));
-        alert("Cadastrado com sucesso!");
-        window.location.reload();
-      } else {
-        if (listaProdutos != null) {
-          listaProdutos.push({
-            nome: nomeInput.value,
-            preco: parseFloat(precoInput.value),
-            descricao: descricaoInput.value,
-          });
+            });
+            localStorage.setItem("produtos", JSON.stringify(listaProdutos));
+            alert("Cadastrado com sucesso!");
+            window.location.reload();
+          } else {
+            alert("Preço não permitido!");
+          }
         } else {
-          listaProdutos = [
-            {
-              nome: nomeInput.value,
-              preco: parseFloat(precoInput.value),
-              descricao: "",
-            },
-          ];
+          if (precoInput.value > 0) {
+            listaProdutos = [
+              {
+                nome: nomeInput.value,
+                preco: parseFloat(precoInput.value),
+                descricao: descricaoInput.value,
+              },
+            ];
+            localStorage.setItem("produtos", JSON.stringify(listaProdutos));
+            alert("Cadastrado com sucesso!");
+            window.location.reload();
+          } else {
+            alert("Preço não permitido!");
+          }
         }
-        localStorage.setItem("produtos", JSON.stringify(listaProdutos));
-        alert("Cadastrado com sucesso!");
-        window.location.reload();
       }
-    } 
+    }
   }
 }
